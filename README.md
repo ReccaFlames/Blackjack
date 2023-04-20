@@ -2,6 +2,10 @@
 
 Java application that simulates game of 21. You can use random inputs or provide your own in a form of `txt` file.
 
+## What do you need to run this app
+- Java 17
+- Gradle 7.4.2
+
 ## Game rules
 - The game is played with a single deck of playing cards.
 - There are only two players (in this case called Sam and the Dealer) who will play against each other. Initially
