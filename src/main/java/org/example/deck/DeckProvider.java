@@ -24,6 +24,9 @@ public class DeckProvider {
             while ((line = reader.readLine()) != null) {
                 values.addAll(Stream.of(line.split(",")).map(String::trim).toList());
             }
+            if (values.size() < 4) {
+                throw new IllegalArgumentException("Provided deck should contain at minimum 4 cards");
+            }
             return values;
         } catch (IOException e) {
             e.printStackTrace();

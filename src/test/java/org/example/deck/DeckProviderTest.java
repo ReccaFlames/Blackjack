@@ -1,6 +1,7 @@
 package org.example.deck;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,5 +48,17 @@ class DeckProviderTest {
         //then
         assertThat(result).isNotNull();
         assertThat(result.getCards()).asList().containsExactly(result2.getCards().toArray());
+    }
+
+    @Test
+    void shouldThrowExceptionWhenInsufficientInput() {
+        //given
+        final String filename = "3-card-deck.txt";
+        
+        //when
+        assertThatThrownBy(() -> deckProvider.provide(filename))
+            //then
+            .isInstanceOf(IllegalArgumentException.class)
+            .hasMessage("Provided deck should contain at minimum 4 cards");
     }
 }
