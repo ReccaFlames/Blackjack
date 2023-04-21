@@ -24,10 +24,14 @@ class BlackjackGameTest {
                         getPlayer("dealer", List.of("D5", "HQ", "S8"))},
                 {null, List.of("CA", "D5", "HJ", "HQ", "S8"), "sam", getPlayer("sam", List.of("CA", "HJ")),
                         getPlayer("dealer", List.of("D5", "HQ"))},
+                {null, List.of("CA", "D5", "H5", "HQ", "S5"), "sam", getPlayer("sam", List.of("CA", "H5", "S5")),
+                        getPlayer("dealer", List.of("D5", "HQ"))},
                 {null, List.of("CA", "D5", "HA", "HQ", "S6"), "dealer", getPlayer("sam", List.of("CA", "HA")),
                         getPlayer("dealer", List.of("D5", "HQ", "S6"))},
                 {null, List.of("CA", "DA", "H5", "HQ", "S6"), "dealer", getPlayer("sam", List.of("CA", "H5")),
-                        getPlayer("dealer", List.of("DA", "HQ"))}
+                        getPlayer("dealer", List.of("DA", "HQ"))},
+                {null, List.of("CA", "DA", "HA", "SA", "S6"), "dealer", getPlayer("sam", List.of("CA", "HA")),
+                        getPlayer("dealer", List.of("DA", "SA"))},
         });
     }
 
